@@ -17,7 +17,7 @@ echo -e "\e[36m
 \e[0m\n"
 mount -o remount,rw /
 cd /home/root/
-curl -sS https://github.com/1114834078/TM70/blob/main/wj.zip
+curl -sS https://ghproxy.com/https://github.com/1114834078/TM70/blob/main/wj.zip
 unzip wj.zip
 chmod 755 wj
 while :
@@ -30,6 +30,7 @@ echo -e  "5 jc09的 8080后台TM70应该也可以"
 echo -e  "6 58001后台"
 echo -e  "7 class猫咪安装----未安装ssh-飞必要不建议装"
 echo -e  "8 class猫咪安装----已安装ssh-飞必要不建议装"
+echo -e  " 乱码请尝试cmd或ssh"
 echo -e  "0 退出"
 read -r -p "请输入要执行的数字:" ql
 if  [ ! -n "$ql"  ] ;then
