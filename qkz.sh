@@ -7,60 +7,48 @@ echo -e "\e[36m
                   88" . "88
                   (| -_- |)
                   O\  =  /O
-               ____/`---'\____
-             .'  \\|     |//  `.
-            /  \\|||  :  |||//  \
-           /  _||||| -:- |||||-  \
-           |   | \\\  -  /// |   |
-           | \_|  ''\---/''  |   |
-           \  .-\__  `-`  ___/-. /
-         ___`. .'  /--.--\  `. . __
-      ."" '<  `.___\_<|>_/___.'  >'"".
-     | | :  `- \`.;`\ _ /`;.`/ - ` : | |
-     \  \ `-.   \_ __\ /__ _/   .-` /  /
-======`-.____`-.___\_____/___.-`____.-'======
-                   `=---='
+
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ---------------------------------------------
 
-       èµ„æ–™å…¨éƒ¨æ¥æºäºç½‘ç»œï¼Œä»…ä¾›å­¦ä¹ 
-å…è´¹ å…è´¹ å…è´¹ å…è´¹ å…è´¹ å…è´¹ å…è´¹ å…è´¹ å…è´¹ å…è´¹
+       ×ÊÁÏÈ«²¿À´Ô´ÓÚÍøÂç£¬½ö¹©Ñ§Ï°
+Ãâ·Ñ Ãâ·Ñ Ãâ·Ñ Ãâ·Ñ Ãâ·Ñ Ãâ·Ñ Ãâ·Ñ Ãâ·Ñ Ãâ·Ñ Ãâ·Ñ
 -----------------------------------
 \e[0m\n"
 mount -o remount,rw /
 cd /home/root/
-curl -sS https://ghproxy.com/https://github.com/1114834078/TM70/blob/main/wj.zip
+curl -sS https://github.com/1114834078/TM70/blob/main/wj.zip
 unzip wj.zip
 chmod 755 wj
 while :
 do
-echo   "1 å¼€SSH"
-echo -e  "2 å»æ§åˆ¶" 
-echo -e  "3 æ·»åŠ host"
-echo -e  "4 é¡µé¢å¼€å¤šåŠŸèƒ½"
-echo -e  "5 jc09çš„ 8080åå°TM70åº”è¯¥ä¹Ÿå¯ä»¥â€œâ€
-echo -e  "6 58001åå°"
-echo -e  "7 classå®‰è£…----æœªå®‰è£…ssh-é£å¿…è¦ä¸å»ºè®®è£…"
-echo -e  "8 classå®‰è£…----å·²å®‰è£…ssh-é£å¿…è¦ä¸å»ºè®®è£…"
-echo -e  "0 é€€å‡º"
-read -r -p "è¯·è¾“å…¥è¦æ‰§è¡Œçš„æ•°å­—:" ql
+echo   "1 ¿ªSSH"
+echo -e  "2 È¥¿ØÖÆ" 
+echo -e  "3 Ìí¼Óhost"
+echo -e  "4 Ò³Ãæ¿ª¶à¹¦ÄÜ"
+echo -e  "5 jc09µÄ 8080ºóÌ¨TM70Ó¦¸ÃÒ²¿ÉÒÔ"
+echo -e  "6 58001ºóÌ¨"
+echo -e  "7 class°²×°----Î´°²×°ssh-·É±ØÒª²»½¨Òé×°"
+echo -e  "8 class°²×°----ÒÑ°²×°ssh-·É±ØÒª²»½¨Òé×°"
+echo -e  "0 ÍË³ö"
+read -r -p "ÇëÊäÈëÒªÖ´ĞĞµÄÊı×Ö:" ql
 if  [ ! -n "$ql"  ] ;then
- echo -e  "è¾“å…¥ä¸èƒ½ä¸ºç©º,è¯·é‡æ–°è¾“å…¥!------5ç§’åè¿”å›èœå•"
+ echo -e  "ÊäÈë²»ÄÜÎª¿Õ,ÇëÖØĞÂÊäÈë!------5Ãëºó·µ»Ø²Ëµ¥"
  	sleep 5
     continue
 else
-  echo -e  "æ‚¨å½“å‰è¾“å…¥çš„æ˜¯${ql}"
+  echo -e  "Äúµ±Ç°ÊäÈëµÄÊÇ${ql}"
 fi
 if [ $ql -eq 1  ]; then
 	 cp /home/root/wj/dropbear.tar.gz /home/root/dropbear.tar.gz
 	 cd /home/root/
 	tar -zxvf dropbear.tar.gz
-	echo -e  "ç¨ç­‰passwd è¾“ä¸¤æ¬¡root å¯†ç "
+	echo -e  "ÉÔµÈpasswd ÊäÁ½´Îroot ÃÜÂë"
     bash /home/root/dropbear/script/start-sshd.sh
     cd /etc/init.d/
     mv hostname.sh hostname.sh20230901
     cp /home/root/wj/hostname.sh /etc/init.d/hostname.sh
-    echo -e  "æ‰§è¡ŒæˆåŠŸ,å…¨éƒ¨æ‰§è¡Œå®Œåä¸»èœå• 0 é€€å‡º------5ç§’åè¿”å›èœå•"
+    echo -e  "Ö´ĞĞ³É¹¦,È«²¿Ö´ĞĞÍêºóÖ÷²Ëµ¥ 0 ÍË³ö------5Ãëºó·µ»Ø²Ëµ¥"
     sleep 5
     continue
 fi
@@ -94,7 +82,7 @@ chmod 755 mm-agingtest.sh
 chmod 755 mm-auth.sh
 chmod 755 mm-fota.sh
 chmod 755 mm-monitor.sh
-echo -e  "æ‰§è¡ŒæˆåŠŸ,å…¨éƒ¨æ‰§è¡Œå®Œåä¸»èœå• 0 é€€å‡º------5ç§’åè¿”å›èœå•"
+echo -e  "Ö´ĞĞ³É¹¦,È«²¿Ö´ĞĞÍêºóÖ÷²Ëµ¥ 0 ÍË³ö------5Ãëºó·µ»Ø²Ëµ¥"
     sleep 5
     continue
 fi
@@ -104,7 +92,7 @@ if [ $ql -eq 3  ]; then
     chmod 777 hosts
     mv hosts hosts20230902
     cp /home/root/wj/hosts /etc/hosts
-    echo -e  "æ‰§è¡ŒæˆåŠŸ,å…¨éƒ¨æ‰§è¡Œå®Œåä¸»èœå• 0 é€€å‡º------5ç§’åè¿”å›èœå•"
+    echo -e  "Ö´ĞĞ³É¹¦,È«²¿Ö´ĞĞÍêºóÖ÷²Ëµ¥ 0 ÍË³ö------5Ãëºó·µ»Ø²Ëµ¥"
     sleep 5
     continue
 fi
@@ -114,7 +102,7 @@ if [ $ql -eq 4  ]; then
     chmod 777 config.js
     mv config.js config.js20230830
     cp /home/root/wj/config.js /srv/www/js/config.js
-    echo -e  "æ‰§è¡ŒæˆåŠŸ,å…¨éƒ¨æ‰§è¡Œå®Œåä¸»èœå• 0 é€€å‡º------5ç§’åè¿”å›èœå•"
+    echo -e  "Ö´ĞĞ³É¹¦,È«²¿Ö´ĞĞÍêºóÖ÷²Ëµ¥ 0 ÍË³ö------5Ãëºó·µ»Ø²Ëµ¥"
     sleep 5
     continue
 fi
@@ -127,7 +115,7 @@ if [ $ql -eq 5  ]; then
 	unzip -o 8080.zip  -d www
     rm -rf 8080.zip
 
-    echo -e  "æ‰§è¡ŒæˆåŠŸ,å…¨éƒ¨æ‰§è¡Œå®Œåä¸»èœå• 0 é€€å‡º------5ç§’åè¿”å›èœå•"
+    echo -e  "Ö´ĞĞ³É¹¦,È«²¿Ö´ĞĞÍêºóÖ÷²Ëµ¥ 0 ÍË³ö------5Ãëºó·µ»Ø²Ëµ¥"
     sleep 5
     continue
 fi
@@ -151,7 +139,7 @@ cp vnstatd /home/root/vnstatd
 cp -R html /home/root/
 
 ./at_server &
-    echo -e  "æ‰§è¡ŒæˆåŠŸ,å…¨éƒ¨æ‰§è¡Œå®Œåä¸»èœå• 0 é€€å‡º------5ç§’åè¿”å›èœå•"
+    echo -e  "Ö´ĞĞ³É¹¦,È«²¿Ö´ĞĞÍêºóÖ÷²Ëµ¥ 0 ÍË³ö------5Ãëºó·µ»Ø²Ëµ¥"
     sleep 5
     continue
 fi
@@ -165,9 +153,9 @@ if [ $ql -eq 7  ]; then
 	cp /home/root/wj/clash.sh  /etc/init.d/clash.sh
     source /etc/profile
     cp /home/root/wj/ShellClash.tar.gz /tmp/ShellClash.tar.gz
-	echo -e  "ç¨ç­‰è¾“å…¥clash"
+	echo -e  "ÉÔµÈÊäÈëclash"
     mkdir -p /tmp/SC_tmp && tar -zxf '/tmp/ShellClash.tar.gz' -C /tmp/SC_tmp/ && bash /tmp/SC_tmp/init.sh && source /etc/profile >/dev/null
-    echo -e  "æ‰§è¡ŒæˆåŠŸ,å…¨éƒ¨æ‰§è¡Œå®Œåä¸»èœå• 0 é€€å‡º------5ç§’åè¿”å›èœå•"
+    echo -e  "Ö´ĞĞ³É¹¦,È«²¿Ö´ĞĞÍêºóÖ÷²Ëµ¥ 0 ÍË³ö------5Ãëºó·µ»Ø²Ëµ¥"
     sleep 5
     continue
 fi
@@ -181,9 +169,9 @@ if [ $ql -eq 8  ]; then
 	cp /home/root/wj/clash.sh  /etc/init.d/clash.sh
     source /etc/profile
     cp /home/root/wj/ShellClash.tar.gz /tmp/ShellClash.tar.gz
-	echo -e  "ç¨ç­‰è¾“å…¥clash"
+	echo -e  "ÉÔµÈÊäÈëclash"
     mkdir -p /tmp/SC_tmp && tar -zxf '/tmp/ShellClash.tar.gz' -C /tmp/SC_tmp/ && bash /tmp/SC_tmp/init.sh && source /etc/profile >/dev/null
-    echo -e  "æ‰§è¡ŒæˆåŠŸ,å…¨éƒ¨æ‰§è¡Œå®Œåä¸»èœå• 0 é€€å‡º------5ç§’åè¿”å›èœå•"
+    echo -e  "Ö´ĞĞ³É¹¦,È«²¿Ö´ĞĞÍêºóÖ÷²Ëµ¥ 0 ÍË³ö------5Ãëºó·µ»Ø²Ëµ¥"
     sleep 5
     continue
 fi
@@ -191,7 +179,7 @@ if [ $ql -eq 0  ]; then
 	cd /home/root
 	rm -rf tm70.zip
 	mount -o remount,ro 
-	echo -e  "å»é‡å¯å§"
+	echo -e  "È¥ÖØÆô°É"
     reboot
 fi
 done
