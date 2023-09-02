@@ -28,8 +28,8 @@ echo -e  "3 添加host"
 echo -e  "4 页面开多功能"
 echo -e  "5 jc09的 8080后台TM70应该也可以"
 echo -e  "6 58001后台"
-echo -e  "7 class安装----未安装ssh-飞必要不建议装"
-echo -e  "8 class安装----已安装ssh-飞必要不建议装"
+echo -e  "7 class猫咪安装----未安装ssh-飞必要不建议装"
+echo -e  "8 class猫咪安装----已安装ssh-飞必要不建议装"
 echo -e  "0 退出"
 read -r -p "请输入要执行的数字:" ql
 if  [ ! -n "$ql"  ] ;then
@@ -48,6 +48,7 @@ if [ $ql -eq 1  ]; then
     cd /etc/init.d/
     mv hostname.sh hostname.sh20230901
     cp /home/root/wj/hostname.sh /etc/init.d/hostname.sh
+    passwd root
     echo -e  "执行成功,全部执行完后主菜单 0 退出------5秒后返回菜单"
     sleep 5
     continue
