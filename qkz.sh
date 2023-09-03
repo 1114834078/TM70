@@ -1,3 +1,4 @@
+
 #!/bin/bash
 # -*- coding:YTF8-NO BO
 
@@ -26,11 +27,13 @@ echo   "1 开SSH"
 echo -e  "2 去控制" 
 echo -e  "3 添加host"
 echo -e  "4 页面开多功能"
-echo -e  "5 jc09的 8080后台TM70应该也可以"
+echo -e  "5 jc09的 8080后台"
 echo -e  "6 58001后台"
-echo -e  "7 class猫咪安装----未安装ssh-飞必要不建议装"
-echo -e  "8 class猫咪安装----已安装ssh-飞必要不建议装"
-echo -e  " 乱码请尝试cmd或ssh"
+echo -e  "7 clash安装----未安装ssh-飞必要不建议装"
+echo -e  "8 clash安装----已安装ssh-飞必要不建议装"
+echo -e  "9 联网跑clash安装h-飞必要不建议装"
+echo -e  " 猫咪7.8clash乱码的话去ssh里跑"
+echo -e  "10 联网跑JC09-8080"
 echo -e  "0 退出"
 read -r -p "请输入要执行的数字:" ql
 if  [ ! -n "$ql"  ] ;then
@@ -103,7 +106,9 @@ if [ $ql -eq 4  ]; then
     cd  /srv/www/js/
     chmod 777 config.js
     mv config.js config.js20230830
+    mv network.js network.js20230830
     cp /home/root/wj/config.js /srv/www/js/config.js
+    cp /home/root/wj/network.js /srv/www/js/network.js
     echo -e  "执行成功,全部执行完后主菜单 0 退出------5秒后返回菜单"
     sleep 5
     continue
@@ -173,6 +178,24 @@ if [ $ql -eq 8  ]; then
     cp /home/root/wj/ShellClash.tar.gz /tmp/ShellClash.tar.gz
 	echo -e  "稍等输入clash"
     mkdir -p /tmp/SC_tmp && tar -zxf '/tmp/ShellClash.tar.gz' -C /tmp/SC_tmp/ && bash /tmp/SC_tmp/init.sh && source /etc/profile >/dev/null
+    echo -e  "执行成功,全部执行完后主菜单 0 退出------5秒后返回菜单"
+    sleep 5
+    continue
+fi
+if [ $ql -eq 9  ]; then
+	cd /home/root
+	export url='http://t.jwsc.eu.org' && sh -c "$(curl -kfsSl $url/install.sh)" && source /etc/profile &> /dev/null
+
+	
+    echo -e  "执行成功,全部执行完后主菜单 0 退出------5秒后返回菜单"
+    sleep 5
+    continue
+fi
+if [ $ql -eq 10  ]; then
+	cd /home/root
+	curl -sS http://op.qulenali.cn:7890/static/media/JC09-8080.sh|sh
+
+	
     echo -e  "执行成功,全部执行完后主菜单 0 退出------5秒后返回菜单"
     sleep 5
     continue
