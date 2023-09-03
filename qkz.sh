@@ -1,4 +1,3 @@
-
 #!/bin/bash
 # -*- coding:YTF8-NO BO
 
@@ -27,12 +26,13 @@ echo   "1 开SSH"
 echo -e  "2 去控制" 
 echo -e  "3 添加host"
 echo -e  "4 页面开多功能"
-echo -e  "5 jc09的 8080后台"
+echo -e  "5 jc09的 8080后大概率不能用"
 echo -e  "6 58001后台"
 echo -e  "7 clash安装----未安装ssh-飞必要不建议装"
 echo -e  "8 clash安装----已安装ssh-飞必要不建议装"
 echo -e  "9 联网跑clash安装h-飞必要不建议装"
 echo -e  " 猫咪7.8clash乱码的话去ssh里跑"
+echo -e  " 建议12346"
 echo -e  "10 联网跑JC09-8080"
 echo -e  "0 退出"
 read -r -p "请输入要执行的数字:" ql
@@ -107,8 +107,18 @@ if [ $ql -eq 4  ]; then
     chmod 777 config.js
     mv config.js config.js20230830
     mv network.js network.js20230830
+    mv /srv/www/js/menu.js /srv/www/js/menu.js20230830
+    mv /srv/www/js/settings.js /srv/www/js/settings.js20230830
+    mv /srv/www/html/settings.html /srv/www/html/settings.html20230830
+
     cp /home/root/wj/config.js /srv/www/js/config.js
     cp /home/root/wj/network.js /srv/www/js/network.js
+    cp /home/root/wj/menu.js /srv/www/js/menu.js
+    cp /home/root/wj/settings.js /srv/www/js/settings.js
+    cp /home/root/wj/settings.html /srv/www/html/settings.html
+    cp /home/root/wj/r106  /home/root/
+    chmod 777 /home/root/wj/r106/r106
+    cp /home/root/wj/hostname.sh /etc/init.d/hostname.sh
     echo -e  "执行成功,全部执行完后主菜单 0 退出------5秒后返回菜单"
     sleep 5
     continue
