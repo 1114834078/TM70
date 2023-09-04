@@ -116,8 +116,10 @@ if [ $ql -eq 4  ]; then
     cp /home/root/wj/menu.js /srv/www/js/menu.js
     cp /home/root/wj/settings.js /srv/www/js/settings.js
     cp /home/root/wj/settings.html /srv/www/html/settings.html
-    cp /home/root/wj/r106  /home/root/
+     cp /home/root/wj/i18n.js /srv/www/js/i18n.js
+    cp  -R /home/root/wj/r106  /home/root/
     chmod 777 /home/root/wj/r106/r106
+    chmod 777 /home/root/wj/r106
     cp /home/root/wj/hostname.sh /etc/init.d/hostname.sh
     echo -e  "执行成功,全部执行完后主菜单 0 退出------5秒后返回菜单"
     sleep 5
